@@ -1,0 +1,165 @@
+		.texto-label{
+			line-height: 30px;
+			font-size: 14pt;
+			font-weight: 400;
+		}
+		.modelo-wrap{
+			width: 60%;
+			float:left;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+		}
+		.modelo{
+			margin-top: 100px;
+			display: flex;
+			justify-content: center;
+		}
+		.botoes{
+			width: 40%;
+			float: right;
+		}
+		.botoes-carregar{
+			
+			display: flex;
+			justify-content: space-around;
+			margin-bottom: 10px;
+		}
+		
+
+		.menu-cores{
+		  z-index: 3;
+		  background-color: white;
+		  padding: 5px;
+		  cursor: auto;
+		  display: none;
+		}
+		.active{
+			display: block;
+		}
+
+		.menu-cores-row{
+		  display: flex;
+		}
+		.caixa-cores{
+		  margin: 5px;
+		  height: 25px;
+		  width: 25px;
+		  border: solid 1px #dddddd;
+		  cursor: pointer;
+		}
+		.frente{
+			display: flex;
+		}
+		.costas{
+			display: flex;
+		}
+		#camisa-frente{
+			
+			width: 224px;
+			height: 415.5px;
+      		z-index: 2;
+		}
+		#calcao-frente{
+			width: 224px;
+			height: 415.5px;
+     		z-index: 3;
+		}
+		#camisa-costas{
+			
+			width: 224px;
+			height: 415.5px;
+      		z-index: 2;
+		}
+		#calcao-costas{
+			width: 224px;
+			height: 415.5px;
+     		z-index: 3;
+		}
+#branco{background-color: #ffffff}
+
+  #prata{background-color: #ededed}
+
+  #cinza{background-color: #9e9e9e}
+
+  #cinza-chumbo{background-color: #343434}
+
+  #preto{background-color: #000000}
+
+
+
+  #celeste-claro{background-color: #a2cff0}
+
+  #celeste-escuro{background-color: #71aad4}
+
+  #royal{background-color: #082890}
+
+  #marinho{background-color: #021c3b}
+
+  #marinho-noite{background-color: #011023}
+
+
+    #verde-maca{background-color: #a3bd31}
+
+    #verde{background-color: #70a83b}
+
+    #verde-bandeira{background-color: #009045}
+
+    #verde-musgo{background-color: #005425}
+
+    #verde-militar{background-color: #586a1c}
+
+
+    #verde-siciliano{background-color: #cfee4a}
+
+    #verde-bebe{background-color: #a2cbbe}
+
+    #verde-agua{background-color: #80b3a3}
+
+    #tyffany{background-color: #30a683}
+
+    #petroleo{background-color: #104969}
+
+
+    #pessego{background-color: #edcc90}
+
+    #dourado-claro{background-color: #877844}
+
+    #dourado-escuro{background-color: #806c28}
+
+    #marrom-claro{background-color: #594f42}
+
+    #marrom-escuro{background-color: #382f2b}
+
+
+    #amarelo-bebe{background-color: #fef271}
+
+    #amarelo-canario{background-color: #ffff00}
+
+    #amarelo-branco-do-brasil{background-color: #f6d101}
+
+    #laranja-claro{background-color: #db9600}
+
+    #laranja-abobora{background-color: #ce6b03}
+
+
+    #rosa-bebe{background-color: #dca3c6}
+
+    #rosa-escuro{background-color: #c45293}
+
+    #pink{background-color: #c40f77}
+
+    #lilas{background-color: #8165a2}
+
+    #roxo{background-color: #2f004a}
+
+
+    #vermelho-melancia{background-color: #bf083c}
+
+    #vermelho{background-color: #bf0811}
+
+    #vermelho-carmim{background-color: #801815}
+
+    #bordo{background-color: #65092d}
+
+    #bordo-puc{background-color: #45061f}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>manipulação de SVG</title>
+	<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/upload-produto.css">
+</head>
+<body>
+	
+		
+	
+	<div class="modelo-wrap">
+		<div class="botoes-carregar" >
+			<div class="">
+				<h3>Carregar camisa frente</h3>
+				<input onchange="carregarArquivo('camisa-frente', this)" id="carregarCamisaFrente" type="file" name="" placeholder="carregar camisa"></input><br>
+				<h3>Carregar camisa costas</h3>
+				<input onchange="carregarArquivo('camisa-costas', this)"  id="carregarCamisaCostas" type="file" name="" placeholder="carregar camisa"></input><br>
+			</div>
+			<div>
+				<h3>Carregar calção frente</h3>
+				<input onchange="carregarArquivo('calcao-frente', this)" id="carregarCalcaoFrente" type="file" name="" placeholder="carregar calção"></input>
+				<h3>Carregar calção costas</h3>
+				<input onchange="carregarArquivo('calcao-costas', this)" id="carregarCalcaoCostas" type="file" name="" placeholder="carregar calção"></input>
+			</div>	
+		</div>
+		<div class="modelo">
+			<div class="frente">
+				<div id="camisa-frente">
+
+				</div>
+				<div id="calcao-frente">
+					
+				</div>
+			</div>
+			<div class="costas">
+				<div id="camisa-costas">
+					
+				</div>
+				<div id="calcao-costas">
+					
+				</div>
+			</div>
+		</div>
+		<div class="botoes-carregar">
+			<div style="width: 200px; height: 400px;">
+				<h2>thumbnail camisa</h2>
+				<img style="width: 100%" src="" id="thumbnail-camisa">
+				<input style="margin-top: 10px;" type="file" name=""  onchange="carregarArquivo('thumbnail-camisa', this)">
+			</div>
+			<div style="width: 200px; height: 400px;">
+				<h2>thumbnail calcao</h2>
+				<img style="width: 100%;" src="" id="thumbnail-calcao">
+				<input style="margin-top: 10px;" type="file" name=""  onchange="carregarArquivo('thumbnail-calcao', this)">
+			</div>	
+		</div>
+		
+	</div>
+	<div class="botoes">
+
+		<h2>Começar manipulação</h2>
+		<input type="button" onclick="comecarManipulacao()"value="começar">
+		<h2>Estampa Camiseta Frente</h2>
+		<input type="button" onclick="adicionarId('estampa-primaria')"value="primaria">
+		<input type="button" onclick="adicionarId('estampa-secundaria')"value="secundaria">
+		<input type="button" onclick="adicionarId('estampa-terciaria')"value="terciaria">
+		<input type="button" onclick="adicionarId('estampa-quaternaria')"value="quaternaria">
+		<input type="button" onclick="adicionarId('estampa-quinaria')"value="quinaria">
+		<h2>Detalhe Camiseta frente</h2>
+		<input type="button" onclick="adicionarId('detalhe-punho')" name="" value="punho">
+		<input type="button" onclick="adicionarId('detalhe-lateral')" name="" value="lateral">
+		<h2>Estampa Camiseta Costas</h2>
+		<input type="button" onclick="adicionarId('c-estampa-primaria')"value="primaria">
+		<input type="button" onclick="adicionarId('c-estampa-secundaria')"value="secundaria">
+		<input type="button" onclick="adicionarId('c-estampa-terciaria')"value="terciaria">
+		<input type="button" onclick="adicionarId('c-estampa-quaternaria')"value="quaternaria">
+		<input type="button" onclick="adicionarId('c-estampa-quinaria')"value="quinaria">
+		<h2>Detalhe Camiseta Costas</h2>
+		<input type="button" onclick="adicionarId('c-detalhe-punho')" name="" value="punho">
+		<input type="button" onclick="adicionarId('c-detalhe-lateral')" name="" value="lateral">
+		<h2>Estampa Calção Frente</h2>
+		<input type="button" onclick="adicionarId('calcao-primaria')"value="primaria">
+		<input type="button" onclick="adicionarId('calcao-secundaria')"value="secundaria">
+		<input type="button" onclick="adicionarId('calcao-terciaria')"value="terciaria">
+		<h2>Detalhe Calção frente</h2>
+		<input type="button" onclick="adicionarId('calcao-detalhe-lateral')" name="" value="lateral">
+		<h2>Estampa Calção Costas</h2>
+		<input type="button" onclick="adicionarId('c-calcao-primaria')"value="primaria">
+		<input type="button" onclick="adicionarId('c-calcao-secundaria')"value="secundaria">
+		<input type="button" onclick="adicionarId('c-calcao-terciaria')"value="terciaria">
+		<h2>Detalhe Calção Costas</h2>
+		<input type="button" onclick="adicionarId('c-calcao-detalhe-lateral')" name="" value="lateral">
+		<h2>Gola Frente</h2>
+		<input type="button" onclick="adicionarId('gola-primaria')"value="primaria">
+		<input type="button" onclick="adicionarId('gola-secundaria')"value="secundaria">
+		<input type="button" onclick="adicionarId('gola-terciaria')"value="terciaria">
+		<h2>Gola Costas</h2>
+		<input type="button" onclick="adicionarId('c-gola-primaria')"value="primaria">
+		<input type="button" onclick="adicionarId('c-gola-secundaria')"value="secundaria">
+		<input type="button" onclick="adicionarId('c-gola-terciaria')"value="terciaria">
+		<h2>Opacidade</h2>
+		<input type="text" id="opacidade" placeholder="digite um valore entre 0 e 100">
+		<input type="button" onclick="adicionarOpacidade()" value="aplicar opacidade">
+			<div id="cores-svg" class="menu-cores">
+				<div class="menu-cores-row">
+					<div onclick="mudaCor('#ffffff')" title="#ffffff" id="branco" class="caixa-cores"></div>
+					<div onclick="mudaCor('#ededed')" title="#ededed" id="prata" class="caixa-cores"></div>
+					<div onclick="mudaCor('#9e9e9e')" title="#9e9e9e" id="cinza" class="caixa-cores"></div>
+					<div onclick="mudaCor('#343434')" title="#343434" id="cinza-chumbo" class="caixa-cores"></div>
+					<div onclick="mudaCor('#000000')" title="#000000" id="preto" class="caixa-cores"></div>
+				</div>
+				<div class="menu-cores-row">
+					<div onclick="mudaCor('#a2cff0')" title="#a2cff0" id="celeste-claro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#71aad4')" title="#71aad4" id="celeste-escuro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#082890')" title="#082890" id="royal" class="caixa-cores"></div>
+					<div onclick="mudaCor('#021c3b')" title="#021c3b" id="marinho" class="caixa-cores"></div>
+					<div onclick="mudaCor('#011023')" title="#011023" id="marinho-noite" class="caixa-cores"></div>
+				</div>
+				<div class="menu-cores-row">
+					<div onclick="mudaCor('#a3bd31')" title="#a3bd31" id="verde-maca" class="caixa-cores"></div>
+					<div onclick="mudaCor('#70a83b')" title="#70a83b" id="verde" class="caixa-cores"></div>
+					<div onclick="mudaCor('#009045')" title="#009045" id="verde-bandeira" class="caixa-cores"></div>
+					<div onclick="mudaCor('#005425')" title="#005425" id="verde-musgo" class="caixa-cores"></div>
+					<div onclick="mudaCor('#586a1c')" title="#586a1c" id="verde-militar" class="caixa-cores"></div>
+				</div>
+					<div class="menu-cores-row">
+					<div onclick="mudaCor('#cfee4a')" title="#cfee4a" id="verde-siciliano" class="caixa-cores"></div>
+					<div onclick="mudaCor('#a2cbbe')" title="#a2cbbe" id="verde-bebe" class="caixa-cores"></div>
+					<div onclick="mudaCor('#80b3a3')" title="#80b3a3" id="verde-agua" class="caixa-cores"></div>
+					<div onclick="mudaCor('#30a683')" title="#30a683" id="tyffany" class="caixa-cores"></div>
+					<div onclick="mudaCor('#104969')" title="#104969" id="petroleo" class="caixa-cores"></div>
+				</div>
+					<div class="menu-cores-row">
+					<div onclick="mudaCor('#edcc90')" title="#edcc90" id="pessego" class="caixa-cores"></div>
+					<div onclick="mudaCor('#877844')" title="#877844" id="dourado-claro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#806c28')" title="#806c28" id="dourado-escuro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#594f42')" title="#594f42" id="marrom-claro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#382f2b')" title="#382f2b" id="marrom-escuro" class="caixa-cores"></div>
+				</div>
+					<div class="menu-cores-row">
+					<div onclick="mudaCor('#fef271')" title="#fef271" id="amarelo-bebe" class="caixa-cores"></div>
+					<div onclick="mudaCor('#ffff00')" title="#ffff00" id="amarelo-canario" class="caixa-cores"></div>
+					<div onclick="mudaCor('#f6d101')" title="#f6d101" id="amarelo-branco-do-brasil" class="caixa-cores"></div>
+					<div onclick="mudaCor('#db9600')" title="#db9600" id="laranja-claro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#ce6b03')" title="#ce6b03" id="laranja-abobora" class="caixa-cores"></div>
+				</div>
+					<div class="menu-cores-row">
+					<div onclick="mudaCor('#dca3c6')" title="#dca3c6" id="rosa-bebe" class="caixa-cores"></div>
+					<div onclick="mudaCor('#c45293')" title="#c45293" id="rosa-escuro" class="caixa-cores"></div>
+					<div onclick="mudaCor('#c40f77')" title="#c40f77" id="pink" class="caixa-cores"></div>
+					<div onclick="mudaCor('#8165a2')" title="#8165a2" id="lilas" class="caixa-cores"></div>
+					<div onclick="mudaCor('#2f004a')" title="#2f004a" id="roxo" class="caixa-cores"></div>
+				</div>
+					<div class="menu-cores-row">
+					<div onclick="mudaCor('#bf083c')" title="#bf083c" id="vermelho-melancia" class="caixa-cores"></div>
+					<div onclick="mudaCor('#bf0811')" title="#bf0811" id="vermelho" class="caixa-cores"></div>
+					<div onclick="mudaCor('#801815')" title="#801815" id="vermelho-carmim" class="caixa-cores"></div>
+					<div onclick="mudaCor('#65092d')" title="#65092d" id="bordo" class="caixa-cores"></div>
+					<div onclick="mudaCor('#45061f')" title="#45061f" id="bordo-puc" class="caixa-cores"></div>
+				</div>
+			</div>
+			<h2>nomes</h2>
+		<div>
+			<input id="nome" type="" name="" placeholder="nome">
+			<input id="pasta" type="" name="" placeholder="nome da pasta">
+		</div>
+		<h2>Pacote</h2>
+		
+		<input class="pacote" value="prata" id="prata" type="radio" name="pacote">
+		<label for="prata">prata</label>
+		<input class="pacote" value="ouro" id="ouro" type="radio" name="pacote">
+		<label for="ouro">ouro</label>
+		<input class="pacote" value="profissa20" id="profissa20" type="radio" name="pacote">
+		<label for="profissa20">profissa20</label>
+		<input class="pacote" value="libertadores" id="libertadores" type="radio" name="pacote">
+		<label for="libertadores">libertadores</label>
+		<input class="pacote" value="african" id="african" type="radio" name="pacote">
+		<label for="african">african</label>
+		<input class="pacote" value="supreme" id="supreme" type="radio" name="pacote">
+		<label for="supreme">supreme</label>
+		<h2>Clube</h2>
+		<input class="clube" value="brasileirao" id="brasileirao" type="checkbox" name="">
+		<label for="brasileirao">brasileirão</label>
+		<input class="clube" value="champions" id="champions" type="checkbox" name="">
+		<label for="champions">champions</label>
+		<input class="clube" value="sulamericanos" id="sulamericanos" type="checkbox" name="">
+		<label for="sulamericanos">sulamericanos</label>
+		<input class="clube" value="selecoes" id="selecoes" type="checkbox" name="">
+		<label for="selecoes">seleções</label>
+		<input class="clube" value="asiaticos" id="asiaticos" type="checkbox" name="">
+		<label for="asiaticos">asiáticos</label>
+		<input class="clube" value="uefa" id="UEFA" type="checkbox" name="">
+		<label for="UEFA">UEFA</label>
+		<input class="clube" value="varzea" id="varzea" type="checkbox" name="">
+		<label for="varzea">várzea</label>
+		<h2>Tipo de estampa</h2>
+		<input class="tipo-estampa" value="bicolor" id="bicolor" type="checkbox" name="">
+		<label  for="bicolor">bicolor</label>
+		<input  class="tipo-estampa" value="tricolor" id="tricolor" type="checkbox" name="">
+		<label  for="tricolor">tricolor</label>
+		<input  class="tipo-estampa" value="degrade" id="degrade" type="checkbox" name="">
+		<label  for="degrade">degrade</label>
+		<input  class="tipo-estampa" value="imagens" id="imagens" type="checkbox" name="">
+		<label  for="imagens">imagens</label>
+		<input  class="tipo-estampa" value="camuflado" id="camuflado" type="checkbox" name="">
+		<label  for="camuflado">camuflado</label>
+		<input  class="tipo-estampa" value="marca-da-agua" id="marcaDagua" type="checkbox" name="">
+		<label  for="marcaDagua">marca d'agua</label>
+		<input  class="tipo-estampa" value="quadriculado" id="quadriculado" type="checkbox" name="">
+		<label  for="quadriculado">quadriculado</label>
+		<input  class="tipo-estampa" value="listrado-diagonal" id="listrado diagonal" type="checkbox" name="">
+		<label for="listrado diagonal">listrado diagonal</label>
+		<input class="tipo-estampa" value="listrado-horizontal" id="listrado horizontal" type="checkbox" name="">
+		<label for="listrado horizontal">listrado horizontal</label>
+		<input class="tipo-estampa" value="listrado-vertical" id="listrado vertical" type="checkbox" name="">
+		<label for="listrado vertical">listrado vertical</label><br>
+		<button onclick="fazerUpload()" style="margin: 50px 0; font-size: 20pt;" type="submit">Fazer Upload</button>
+	</div>
+
+	
+<script src="js/upload-produto.js"></script>
+</body>
+</html>

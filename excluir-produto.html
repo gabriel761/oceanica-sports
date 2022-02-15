@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Excluir produto</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/excluir-produto.css">
+	<script type="text/javascript" src="js/excluir-produto.js"></script>
+</head>
+<body>
+	<section class="container-principal">
+		<div class="menu-pesquisa">
+			<input id="nome-produto-input" class="nome-produto-input" type="text" name="" placeholder="Nome do produto (deixe em branco para mostrar todos os produtos)">
+			<select id="pacote-selecionado" class="pacote-produto-input">
+				<option value="">Todos os pacotes</option>
+				
+				<option value="prata">Prata</option>
+				<option value="ouro">Ouro</option>
+				<option value="profissa20">Profissa20</option>
+				<option value="libertadores">Libertadores</option>
+				<option value="african">African</option>
+				<option value="supreme">Supreme</option>
+			</select>
+			<button onclick="pesquisarProdutos()" class="btn-pesquisar">Pesquisar</button>
+		</div>
+			<table>
+			<thead>
+				<tr ><th>Nome do produto</th><th>Pacote</th><th>Excluir</th></tr>
+			</thead>
+			<tbody id="resultado-pesquisa">
+
+				
+
+			</tbody>
+		</table>
+	</section>
+</body>
+</html>

@@ -1,0 +1,601 @@
+@media  (max-width: 1550px){
+	.container-simulador{
+		width: 100%;
+	}
+	.menu-geral-pacotes{
+		position: fixed;
+		z-index: 120;
+		transform: translateX(25%);
+		top: -70px;
+	}
+	.botoes-simulador{
+		position: fixed;
+		transform: scale(0.80);
+		z-index: 100;
+		top: 5vh;
+	}
+	.botoes-simulador-direita{
+		position: fixed;
+		transform: scale(0.80);
+		z-index: 100;
+		top: 5vh;
+		right: 0px;
+	}
+	.manequim-completo{
+		transform: scale(0.90);
+		top: 50px;
+		z-index: 0;
+	}
+	.selo-pacote{
+		top: 10px;
+		left: 58%;
+		z-index: 0;
+		transform: scale(0.90);
+	}
+	.area-simulador{
+		height: 750px;
+	}
+	.textos-nomes-modelos{
+	  position: absolute;
+	  right: 57%;
+	  top: 150px;
+	  width: 35%;
+	}
+	.seta-texto-modelos{
+	  padding-top: 15px;
+	  
+	}
+	.row-impressos-calcao .menu-cores{
+	  top: -20px;
+	}
+	.row-meia .menu-cores{
+	  top: -100px;
+	}
+	.adicionar-carrinho{
+		top: 20px;
+		left: -115px;
+	}
+	.adicionar-carrinho h3{
+		font-size: 12pt;
+	}
+}
+@media (max-width: 900px){
+	.manequim-completo{
+		transform: scale(0.70) translate(-72%);
+		top: 0px;
+		left: 50%;
+		z-index: 0;
+	}
+	.selo-pacote{
+		top: 0px;
+		left: 62%;
+		z-index: 0;
+		transform: scale(0.70);
+	}
+	.area-simulador{
+		height: 620px;
+		margin-bottom: 30px;
+	}
+	.textos-nomes-modelos{
+	  left: 20%;
+	  top: 250px;
+	  width: 35%;
+	}
+
+	.botoes-simulador{
+		display: flex;
+		position: fixed;
+		top: auto;
+		bottom:  0px;
+		width: 100%;
+		margin: 0;
+		transform: scale(1);
+	}
+	.botoes-simulador-direita{
+		display: flex;
+		position: fixed;
+		top: auto;
+		bottom: 0px;
+		width: 100%;
+		margin: 0;
+		transform: scale(1);
+		display: none;
+	}
+	.botao-simulador{
+		width: 30%;
+		margin: 0;
+		border-radius: 0px;
+		border: solid 1px #cccccc;
+		height: 60px;
+	}
+	.menu-geral{
+		position: fixed;
+		top: auto;
+		bottom: 120px;
+	}
+	.menu-geral-pacotes{
+		top: auto;
+		bottom: 60px;
+		transform: scale(.70) translateX(-40%);
+	}
+
+	.seta-texto-modelos{
+		background-image: url('../images/simulador/interface-nova/seta2.png');
+		transform: rotate(-90deg) translate(-50%, -250%);
+		visibility: hidden;
+	}
+	.seta-celular{
+		position: absolute;
+		top: -75px;
+		left: -30px;
+		visibility: visible;
+		width: 400px;
+	}
+	.seta-disclaimer{
+		color: white
+	}
+	.lista-cores-row{
+		
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+	}
+	.name-cor{
+		flex-direction: column;
+		width: 70px;
+	}
+	.name-cor p{
+		margin: 0;
+		width: 70px;
+		text-align: center;
+	}
+	.caixa-cor-escolhida{
+		margin-bottom: 5px;
+	}
+	.image-box-btn-simulador{
+		width: 20px;
+		height: 20px;
+	}
+	.texto-btn-simulador{
+		font-size: 8pt;
+		margin-bottom: 10px;
+	}
+	.cardeais{
+		display: none;
+	}
+	.nova-simulacao-download {
+		left: 270px;
+	}
+	.header-image-box{
+		width: 20px;
+	}
+	.texto-btn-simulador-dif{
+		margin-bottom: 2px;
+  		font-size:7pt;
+	}
+	.texto-btns-header{
+		font-size: 8pt;
+		margin-left: 5px;
+	}
+
+	/*menu pacotes*/
+	.menu-geral-pacotes{
+		width: 100vw;
+		height: 85vh;
+		top: auto;
+		bottom: 60px;
+		left: 0;
+		transform: scale(1) translate(0);
+	}
+	.lista-pacotes{
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	}
+	.box-pacote{
+		width: 80vw;
+	}
+	/* menu modelos */
+	.menu-geral-modelos{
+		position: fixed;
+		top: auto;
+		bottom: 60px;
+		left: 0;
+		width: 100vw;
+		height: 75vh;
+	}
+	.modelos-disponiveis{
+		height: 80%;
+		grid-template-columns: 1fr 1fr 1fr;
+
+	}
+	.filtros{
+		width: 100%;
+		justify-content: center;
+		display: none;
+	}
+	.design{
+		grid-template-columns: 1fr;
+		grid-gap: 0px;
+		padding-left: 30px;
+	}
+	.clubes{
+		display: block;
+		padding-right: 30px;
+	}
+	.imagem-modelo{
+		width: 80px;
+	}
+	.btn-filtros{
+		display: block;
+	}
+
+
+	/* menu cores */
+	.image-menu-cores{
+		visibility: hidden;
+	}
+	.menu-geral-cores{
+		background: transparent;
+		width: 1px;
+		height: 1px;
+	}
+	.fundo-cores-mobile{
+		background-color: white;
+		display: block;
+		width: 70px;
+		height: 550px;
+		position: fixed;
+		bottom: 60px;
+
+	}
+	.fundo-cores-mobile-direita{
+		right: 0px;
+	}
+	.fundo-cores-mobile-esquerda{
+		left: 0px;
+	}
+	.lista-partes-cores{
+		height: 1px;
+	}
+	.image-text-wrap-menu-cores{
+		height: 1px;
+	}
+	/*colunas especificas cores */
+
+	
+	.row-detalhes{
+		bottom: 245px;
+		left:   0;
+	}
+	
+	.row-gola{
+		left: 0;
+		bottom: 350px;
+		border-bottom: 2px dotted #dddddd;
+	}
+	.row-estampa{
+		left: 0;
+		bottom: 445px;
+		border-bottom: 2px dotted #dddddd;
+	}
+	.row-impressos-camisa{
+		bottom: 60px;
+		left: 0;
+	}
+	.row-impressos-camisa .caixa-cor-escolhida{
+		border-radius: 20px;
+	}
+	.row-impressos-calcao{
+		position: fixed;
+		bottom: 260px;
+		right: 0;
+		z-index: 100;
+	}
+	.row-impressos-calcao .caixa-cor-escolhida{
+		border-radius: 20px;
+	}
+	.row-estampa-calcao{
+		bottom: 475px;
+		right:   0;	
+		border-bottom: 2px dotted #dddddd;
+	}
+	.row-detalhe-calcao{
+		bottom: 425px;
+		right: 0;
+		border-bottom: 2px dotted #dddddd;
+	}
+	.row-meia{
+		bottom: 120px;
+		right:  0;
+		border-bottom: 2px dotted #dddddd;
+		border-top: 2px dotted #dddddd;
+	}
+
+
+.row-detalhes .menu-cores{
+	position: fixed;
+	left: auto;
+	top: auto;
+	left:   60px;
+	bottom: 60px;
+	z-index: 999;
+}
+.row-impressos-camisa .menu-cores{
+	position: fixed;
+	left: auto;
+	top: auto;
+	left:   60px;
+	bottom: 60px;
+	z-index: 999;
+}
+.row-impressos-calcao .menu-cores{
+	position: fixed;
+	left: auto;
+	top: auto;
+	right: 60px;
+	bottom: 60px;
+	z-index: 999;
+}
+.row-detalhe-calcao .menu-cores{
+	left: auto;
+	right:  35px;
+	z-index: 999;
+}
+.row-estampa-calcao .menu-cores{
+	left: auto;
+	right:  35px;
+	z-index: 999;
+}
+.row-meia .menu-cores{
+	position: fixed;
+	left: auto;
+	top: auto;
+	right:    60px;
+	bottom: 70px;
+	z-index: 999;
+}
+#menu-punho{
+	border-bottom: 2px dotted #dddddd;
+	margin-bottom: 10px;
+}
+#menu-lateral{
+	border-bottom: 2px dotted #000000;
+}
+
+	/* textos simulador */
+
+
+	.subtitulo-estampa-camisa{
+		font-size: 10pt;
+		position: fixed;
+		bottom: 495px;
+		left: 40px;
+		transform: rotate(-90deg);
+
+	}
+	.subtitulo-gola-camisa{
+		font-size: 10pt;
+		position: fixed;
+		bottom: 370px;
+		left: 52px;
+		transform: rotate(-90deg);
+	}
+	.subtitulo-estampa-calcao{
+		font-size: 10pt;
+		position: fixed;
+		right:  30px;
+		bottom: 510px;
+		transform: rotate(-90deg);
+	}
+	.subtitulo-detalhe-camisa{
+		font-size: 10pt;
+		position: fixed;
+		right: 0;
+		bottom: 230px;
+		visibility: hidden;
+	}
+	.subtitulo-detalhe-calcao{
+		visibility: hidden;
+	}
+	.subtitulo-detalhe-camisa{
+		font-size: 10pt;
+		position: fixed;
+		right: 0;
+		bottom: 230px;
+		visibility: hidden;
+	}
+	.subtitulo-impressoes-camisa{
+		font-size: 10pt;
+		position: fixed;
+		right: 0;
+		bottom: 230px;
+		visibility: hidden;
+	}
+	.subtitulo-impressoes-calcao{
+		font-size: 10pt;
+		position: fixed;
+		right: 0;
+		bottom: 230px;
+		visibility: hidden;
+	}
+	.subtitulo-cor{
+		display: none;
+	}
+	.cores-meiao-titulo{
+		position: fixed;
+		font-size: 16pt;
+		right: 50px;
+		bottom: 120px;
+		border: none;
+		font-weight: bold;
+		transform: rotate(-90deg);
+		color:white;
+		z-index: 0;
+	}
+	
+	.cores-camisa-titulo{
+		position: fixed;
+		font-size: 16pt;
+		left: 50px;
+		bottom: 515px;
+		border: none;
+		font-weight: bold;
+		transform: rotate(-90deg);
+		color:white;
+	}
+	.cores-calcao-titulo{
+		position: fixed;
+		font-size: 16pt;
+		right: 50px;
+		bottom: 515px;
+		border: none;
+		font-weight: bold;
+		transform: rotate(-90deg);
+		color:white;
+	}
+
+	/* menu nome e numero */
+
+	.menu-geral-nome{
+		width: 100%;
+		left: 0;
+	}
+	.cores-input-wrap{
+		justify-content: space-between;
+	}
+	.name-cor-nome-menu{
+		flex-direction: row;
+		width: auto;
+	}
+	.name-cor-nome-menu p{
+		margin-right: 10px;
+	}
+	.menu-geral-nome{
+		height: 320px;
+		top: auto;
+		bottom: 60px;
+	}
+	.fonte-container{
+		height: 80px;
+	}
+
+	/* menu escudo peito */
+	.menu-geral-escudo{
+		bottom: 60px;
+		left: 0;
+		width: 100%;
+		height: 230px;
+		padding: 10px 20px;
+	}
+	.wrap-escudos-peito{
+		display: flex;
+	}
+	.img-escudo{
+		width: 70px;
+		margin-left: 10px;
+	}
+	.img-escudo-row{
+		margin-bottom: 10px;
+	}
+
+	/* menu geral emblema */
+	.menu-geral-emblema{
+		width: 100%;
+		left: 0;
+		height: 120px;
+		bottom: 60px;
+	}
+
+	/* header simulador */
+	.header-simulador{
+		visibility: hidden;
+	}
+	.container-header{
+		height: 50px;
+		z-index: 200;
+	}
+	.container-mobile{
+		position: fixed;
+		top: 3px;
+		left: 0;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row-reverse;
+		height: 50px;
+		z-index: 200;
+		padding: 0 10px;
+	}
+	.container-mobile .box-wpp{
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+	}
+	.btn-menu-mobile{
+		padding: 10px;
+		border: 1px white solid;
+		border-radius: 5px;
+		height: 40px;
+		position: relative;
+		z-index: 200;
+	}
+	.icone-menu-mobile{
+		color:white;
+		font-size: 16pt;
+		margin-bottom: 0px;
+		line-height: 1;
+		height: 20px;
+	}
+	.logo-principal{
+		width:  80px;
+	}
+	.header-image-box{
+		width: 40px;
+	}
+	.menu-mobile{
+		width: 200px;
+		background-color: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		top: 100%;
+		left:  100%;
+		z-index: 200;
+	}
+	.item-menu-mobile{
+		padding: 10px 20px;
+		color: white;
+	} 
+	.mais-produtos{
+	
+	display: block;
+}
+#cores-nome{
+	position: fixed;
+	left: auto;
+	top: auto;
+	right: 20px;
+	bottom: 60px;
+	transition: all 0.5s;
+}	
+
+#cores-numero{
+	position: fixed;
+	left: auto;
+	top: auto;
+	right: 20px;
+	bottom: 60px;
+	transition: all 0.5s;
+}
+}
+
+
+
+/* classes de apoio */
+
+.display-flex{
+	display: flex;
+}
+.adicionar-carrinho{
+	top: 10px;
+	left: -100px;
+}
+.adicionar-carrinho h3{
+	font-size: 10pt;
+}
